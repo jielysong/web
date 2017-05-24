@@ -1,0 +1,103 @@
+
+<meta charset="utf-8">
+<p class="page">
+	<h1 class="title">Angularjs 基础</h1>
+	<h2>1.什么是AngularJs</h2>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;
+		AngularJS 最初由 Misko Hevery 和 Adam Abrons 于 2009 年开发，后来成为了
+		Google 公司的项目。 AngularJS 弥补了 HTML 在构建应用方面的不足， 其通过使用标识
+		符（ directives）结构，来扩展 Web 应用中的 HTML 词汇，使开发者可以使用 HTML 来声
+		明动态内容，从而使得 Web 开发和测试工作变得更加容易。
+	</p>
+	<h3>AngularJS 功能：</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;
+		AngularJS 是专门为应用程序设计的 HTML。
+	</p>
+	
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;
+		AngularJS 使得开发现代的单一页面应用程序（ SPAs： Single Page Applications）变得更加容易。
+	</p>
+	
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	1 AngularJS 把应用程序数据绑定到 HTML 元素。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	2 AngularJS 可以克隆和重复 HTML 元素。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	3 AngularJS 可以隐藏和显示 HTML 元素。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	4 AngularJS 可以在 HTML 元素"背后"添加代码。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	5 AngularJS 支持输入验证</p>
+	
+	<h3>Angularjs 号称 下一代 web 应用 主要特性如下：</h3>
+		
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	1.MVC。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	2.模块化与依赖注入。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	3.双向数据绑定。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;	4.指令与 UI 控件。</p>
+	
+	<h2>2.例子</h2>
+	<h3>1 ng-bind="name"</h3>
+	<div>
+		<div ng-app="">
+			<p>在输入框中尝试输入： </p>
+			<p>姓名： <input type="text" ng-model="name"></p>
+			<p ng-bind="name"></p>
+		</div>
+		
+	</div>
+	
+	<h3>2 {{"name"}}</h3>
+	<div>
+		<div ng-app="">
+			<p>在输入框中尝试输入： </p>
+			<p>姓名： <input type="text" ng-model="name"></p>
+			<p>{{name}}</p>
+		</div>
+		
+	</div>
+	
+	<h3>3 ng-init  firstName='John'</h3>
+	<div>
+		<div ng-init="firstName='John'">
+			<p>姓名为 <span ng-bind="firstName"></span></p>
+		</div>
+		
+	</div>
+	
+	<h3>4 AngularJS 对象   person={firstName:'John',lastName:'Doe'}</h3>
+	<p> AngularJS 数组 points=[1,15,19,2,40]</p>
+	<div>
+		<div ng-init="person={firstName:'John',lastName:'Doe'}">
+			<p>姓名为 {{person.lastName}}</p>
+		</div>
+		<div ng-init="points=[1,15,19,2,40]">
+			<p>第三个值为 {{points[2]}}</p>
+		</div>
+		
+	</div>
+	
+	<h3>5 控制器Controller</h3>
+	
+	<div ng-controller="namesController">
+		<ui>
+			<li ng-repeat="x in names">
+				{{x.name+', '+x.country}}
+			</li>
+		</ui>
+		
+	</div>
+	
+	<h3>6 $http 请求数据</h3>
+	
+	<div ng-controller="customersController">
+		<ui>
+			<li ng-repeat="x in names">
+				{{x.Name+', '+x.Country}}
+			</li>
+		</ui>
+		
+	</div>
+	
+</p>
+
+
+
+
+
+
